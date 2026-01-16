@@ -1,5 +1,18 @@
 /* Additional CSS added to template post download */
 
+/* Global Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container Responsive */
+container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Fix for Font Awesome icons - ensure content and font-family are set */
 /* LinkedIn icon */
 ul.icons li a.icon.brands.fa-linkedin:before,
@@ -135,15 +148,94 @@ a.icon.far.fa-file:before,
     padding-left: 20px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST APPROACH
+   ============================================ */
 
+/* Professional Title Responsive */
+@media screen and (max-width: 736px) {
+    .professional-title {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .professional-title {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Intro Section Responsive */
+@media screen and (max-width: 900px) {
+    .introPic {
+        max-width: 180px;
+        max-height: 250px;
+        margin-right: 8px;
+    }
+    .aboutMe {
+        padding-left: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .introPic {
+        max-width: 150px;
+        max-height: 200px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .aboutMe {
+        padding-left: 0;
+        clear: both;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .introPic {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        max-height: none;
+        height: auto;
+        margin: 0 auto 15px auto;
+    }
+    .aboutMe {
+        padding-left: 0;
+        text-align: justify;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+}
+
+/* Portfolio Cards Responsive */
 @media screen and (max-width: 1200px) {
+    .topColumn {
+        width: 31%;
+    }
+    .otherColumn {
+        width: 32%;
+    }
     .currentButtonCentered,
     .topButtonCentered,
     .otherButtonCentered {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .topColumn {
+        width: 48%;
+    }
+    .otherColumn {
+        width: 48%;
     }
 }
 
@@ -151,7 +243,7 @@ a.icon.far.fa-file:before,
     .currentColumn,
     .topColumn,
     .otherColumn {
-        width: 50%;
+        width: 48%;
     }
     .currentButtonCentered,
     .topButtonCentered,
@@ -159,15 +251,51 @@ a.icon.far.fa-file:before,
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 0.5rem;
     }
     .portfoliop {
         text-indent: 10px;
         margin-left: 5px;
+        font-size: 0.95rem;
+    }
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .currentColumn,
+    .topColumn,
+    .otherColumn {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .row {
+        margin: 8px 0;
+    }
+    .cardImg {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    .portfoliop {
+        text-indent: 10px;
+        margin-left: 0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .cardTitle {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .outline {
+        padding: 15px;
+        margin-bottom: 15px;
     }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
 @media screen and (max-width: 600px) {
     .currentColumn,
     .topColumn,
@@ -183,9 +311,103 @@ a.icon.far.fa-file:before,
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 0.5rem;
     }
     .portfoliop {
         text-indent: 10px;
-        margin-left: 5px;
+        margin-left: 0;
+        font-size: 0.85rem;
     }
+    .cardTitle {
+        font-size: 0.95rem;
+    }
+    .button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Header Icons Responsive */
+@media screen and (max-width: 736px) {
+    ul.icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    ul.icons li {
+        margin: 0.25rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media screen and (max-width: 480px) {
+    .row,
+    .row > .column {
+        padding: 4px;
+    }
+    .currentButtonCentered {
+        margin-left: 0;
+    }
+    h2.major.rHeader {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    h1.major {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet Landscape Optimization */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .topColumn {
+        width: 31%;
+    }
+    .otherColumn {
+        width: 31%;
+    }
+}
+
+/* Article Section Responsive */
+@media screen and (max-width: 736px) {
+    #main article {
+        padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+    h1.major,
+    h2.major {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #main article {
+        padding: 2.5rem 1rem 1rem 1rem;
+    }
+    h1.major {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+    }
+    h2.major.rHeader {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+    p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+
+/* Large Desktop Optimization */
+@media screen and (min-width: 1400px) {
+    .topColumn,
+    .otherColumn,
+    .currentColumn {
+        max-width: 400px;
+    }
+}
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
