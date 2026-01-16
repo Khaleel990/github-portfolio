@@ -1,5 +1,39 @@
 /* Additional CSS added to template post download */
 
+/* Fix for Font Awesome icons - ensure content and font-family are set */
+/* LinkedIn icon */
+ul.icons li a.icon.brands.fa-linkedin:before,
+a.icon.brands.fa-linkedin:before,
+.icon.brands.fa-linkedin:before {
+    content: "\f08c" !important;
+    font-family: "Font Awesome 5 Brands" !important;
+}
+
+/* GitHub icon */
+ul.icons li a.icon.brands.fa-github:before,
+a.icon.brands.fa-github:before,
+.icon.brands.fa-github:before {
+    content: "\f09b" !important;
+    font-family: "Font Awesome 5 Brands" !important;
+}
+
+/* Resume/File icon */
+ul.icons li a.icon.far.fa-file:before,
+a.icon.far.fa-file:before,
+.icon.far.fa-file:before {
+    content: "\f15b" !important;
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 400 !important;
+}
+
+/* Professional Title */
+.professional-title {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
 /* Portfolio Page CSS */
 
 .row {
