@@ -137,15 +137,246 @@ a.icon.far.fa-file:before,
 }
 
 .introPic {
-    max-width: 200px;
+    width: 100%;
+    max-width: 220px;
     max-height: 275px;
-    border-radius: 4px;
-    float: left;
-    margin-right: 10px
+    border-radius: 8px;
+    display: block;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.aboutMe-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.aboutMe-image {
+    flex: 0 0 30%;
+    max-width: 260px;
+    text-align: center;
 }
 
 .aboutMe {
-    padding-left: 20px;
+    flex: 1;
+    padding-left: 0;
+}
+
+.aboutMe-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aboutMe-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.aboutMe-title {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+.aboutMe-title strong {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.aboutMe-summary {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+.aboutMe-info {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aboutMe-info h3,
+.aboutMe-education h3,
+.aboutMe-experience h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aboutMe-info h3 i,
+.aboutMe-education h3 i,
+.aboutMe-experience h3 i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.aboutMe-info p {
+    margin: 0.75rem 0;
+    padding-left: 0;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.aboutMe-info p i {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    min-width: 18px;
+    margin-top: 0.2rem;
+}
+
+.aboutMe-info p strong {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: 70px;
+}
+
+.aboutMe-info p a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.aboutMe-info p a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+.aboutMe-education {
+    margin: 2rem 0 0 0;
+    padding-top: 1.5rem;
+}
+
+.aboutMe-education .education-item {
+    margin: 1rem 0;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.aboutMe-education .education-degree strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.aboutMe-education .education-school em {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+.aboutMe-experience {
+    margin: 2rem 0 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.experience-list > li {
+    margin: 1.25rem 0;
+}
+
+.experience-role {
+    margin: 0 0 0.75rem 0;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+}
+
+.experience-role strong {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.experience-role a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
+}
+
+.experience-role a:hover {
+    color: rgba(255, 255, 255, 1);
+    border-bottom-color: rgba(255, 255, 255, 0.65);
+}
+
+.experience-dates {
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 400;
+}
+
+.aboutMe-experience ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.25rem;
+}
+
+.aboutMe-experience ul li {
+    margin: 0.4rem 0;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+}
+
+/* Skills Section */
+.skills-container {
+    margin-top: 2rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skills-list li {
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skills-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.skills-list li i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+
+.skills-list li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
 }
 
 /* ============================================
@@ -169,46 +400,159 @@ a.icon.far.fa-file:before,
 
 /* Intro Section Responsive */
 @media screen and (max-width: 900px) {
+    .aboutMe-layout {
+        gap: 2rem;
+    }
     .introPic {
-        max-width: 180px;
+        max-width: 200px;
         max-height: 250px;
-        margin-right: 8px;
     }
-    .aboutMe {
-        padding-left: 15px;
-        font-size: 0.95rem;
+    .aboutMe-header h2 {
+        font-size: 1.6rem;
     }
-}
-
-@media screen and (max-width: 736px) {
-    .introPic {
-        max-width: 150px;
-        max-height: 200px;
-        margin-right: 10px;
-        margin-bottom: 10px;
+    .aboutMe-summary {
+        font-size: 0.9rem;
     }
-    .aboutMe {
-        padding-left: 0;
-        clear: both;
+    .aboutMe-info p,
+    .aboutMe-education p {
         font-size: 0.9rem;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 736px) {
+    .aboutMe-layout {
+        gap: 1.5rem;
+    }
     .introPic {
-        float: none;
-        display: block;
-        max-width: 100%;
+        max-width: 180px;
+        max-height: 220px;
+    }
+    .aboutMe-header {
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.875rem;
+    }
+    .aboutMe-header h2 {
+        font-size: 1.5rem;
+    }
+    .aboutMe-title {
+        font-size: 0.95rem;
+    }
+    .aboutMe-summary {
+        margin: 1.25rem 0;
+        padding: 0.875rem 0;
+        font-size: 0.875rem;
+    }
+    .aboutMe-info,
+    .aboutMe-education {
+        margin: 1.5rem 0;
+        padding: 1.25rem 0;
+    }
+    .aboutMe-info h3,
+    .aboutMe-education h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.875rem;
+    }
+    .aboutMe-info p {
+        margin: 0.625rem 0;
+        font-size: 0.875rem;
+    }
+    .aboutMe-education p {
+        margin: 0.875rem 0;
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutMe-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .aboutMe-image {
+        flex: 0 0 auto;
+        max-width: 220px;
         width: 100%;
+    }
+    .introPic {
+        max-width: 100%;
         max-height: none;
         height: auto;
-        margin: 0 auto 15px auto;
     }
     .aboutMe {
-        padding-left: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .aboutMe-header {
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+    .aboutMe-header h2 {
+        font-size: 1.4rem;
+    }
+    .aboutMe-title {
+        font-size: 0.9rem;
+    }
+    .aboutMe-summary {
         text-align: justify;
         font-size: 0.85rem;
-        line-height: 1.6;
+        line-height: 1.7;
+        margin: 1rem 0;
+        padding: 0.75rem 0;
+    }
+    .aboutMe-info,
+    .aboutMe-education {
+        margin: 1.25rem 0;
+        padding: 1rem 0;
+    }
+    .aboutMe-info h3,
+    .aboutMe-education h3 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    .aboutMe-info p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin: 0.75rem 0;
+        font-size: 0.85rem;
+    }
+    .aboutMe-info p strong {
+        min-width: auto;
+    }
+    .aboutMe-education p {
+        margin: 0.75rem 0;
+        font-size: 0.85rem;
+    }
+    .aboutMe-education p strong {
+        font-size: 0.95rem;
+    }
+    .aboutMe-education p em {
+        font-size: 0.9rem;
+    }
+}
+
+/* Skills Section Responsive */
+@media screen and (max-width: 736px) {
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skills-list li {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-list li {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .skills-list li i {
+        font-size: 1rem;
     }
 }
 
