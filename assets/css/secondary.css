@@ -104,6 +104,7 @@ a.icon.far.fa-file:before,
     flex-wrap: wrap;
     gap: 1.5rem;
     margin: 1.5rem 0;
+    justify-content: center;
 }
 
 .portfolio-project-images img {
@@ -120,6 +121,25 @@ a.icon.far.fa-file:before,
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.95rem;
+}
+
+.portfolio-project-desc p {
+    margin: 0.75rem 0 0 0;
+}
+
+.portfolio-project-desc p:first-child {
+    margin-top: 0;
+}
+
+.portfolio-project-desc a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-project-desc a:hover {
+    color: rgba(255, 255, 255, 1);
+    border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Level Design - three images horizontally with captions */
@@ -155,6 +175,78 @@ a.icon.far.fa-file:before,
     margin-top: 0.75rem;
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.85);
+}
+
+.level-design-desc {
+    margin: 1.5rem 0 0 0;
+    text-align: center;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+/* Features Added Games: first 3 in one row, horizontally centered; 4th below centered */
+.features-game .level-design-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.level-design-grid figure {
+    margin: 0;
+    flex: 1 1 140px;
+    max-width: 140px;
+    text-align: center;
+}
+
+.level-design-grid figure a {
+    display: block;
+    text-decoration: none;
+}
+
+.level-design-grid figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.level-design-grid figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.level-design-desc {
+    margin: 1.5rem 0 0 0;
+    text-align: center;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+/* Game Mechanics: first 3 in one row, horizontally centered; 4th below centered */
+.game-mechanics .level-design-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.game-mechanics .level-design-grid figure:nth-child(1),
+.game-mechanics .level-design-grid figure:nth-child(2),
+.game-mechanics .level-design-grid figure:nth-child(3) {
+    transform: scale(0.8);
+}
+
+.game-mechanics .level-design-grid figure:nth-child(4) {
+    transform: scale(1.8);
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto; margin-top: 8.5rem;
 }
 
 .row {
